@@ -1,2 +1,2 @@
 # srwr
-Python Implement for Signed Random Walk with Restart
+Python Implementation for Signed Random Walk with Restart
