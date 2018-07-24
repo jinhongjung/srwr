@@ -17,7 +17,7 @@ def iterate(nAp, nAn, seeds, c, epsilon, beta, gamma, max_iters,
 
     residuals = np.zeros((max_iters, 1))
 
-    for i in rage(max_iters):
+    for i in range(max_iters):
         if handles_deadend:
             new_rp = (1-c)*( nAnT.dot(rp + (1.0-gamma)*rn)
                              beta*(nAnT.dot(rn)) )
