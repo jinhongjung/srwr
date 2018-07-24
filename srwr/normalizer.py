@@ -13,7 +13,7 @@ def semi_row_normalize(A):
     invD = spdiags(invd, 0, m, n)
     snA = invD * A
 
-    I, J, K = find(A)
+    I, J, K = find(snA)
 
     pos = K > 0;
     neg = K < 0;

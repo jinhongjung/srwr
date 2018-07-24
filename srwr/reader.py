@@ -27,4 +27,4 @@ def read_graph(path):
 
     A = csr_matrix((data, (rows, cols)), shape=(n, n))
 
-    return A, base
+    return A, int(base)
