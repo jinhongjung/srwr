@@ -77,8 +77,8 @@ We summarize the input arguments of `srwr` in the following table:
 | `output-type` | Type of output vector {`rd`, `rp`, `rn`, `both`} | `None`|
 | `seed` |  A single seed (query) node id | `None`|
 | `c` | Restart probablity | `0.15`|
-| `besa` | Balance attenuation factor | `1e-9`|
-| `gamma` | Balance attenuation factor | `1e-9`|
+| `beta` | Balance attenuation factor | `0.5`|
+| `gamma` | Balance attenuation factor | `0.5`|
 | `epsilon` | Error tolerance for power iteration | `1e-9`|
 | `max-iters` |  Maximum number of iterations for power iteration | `100`|
 | `handles-deadend` |  If true, handles the deadend issue | `True`|
