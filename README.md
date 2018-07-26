@@ -57,10 +57,9 @@ The following example shows how to import `srwr` and compute an SRWR query.
 ```python
 from srwr.srwr import SRWR
 srwr = SRWR()
-srwr.read_graph(input_path)
-srwr.normalize()
-rd, rp, rn, residuals = srwr.query(seed, c, epsilon, beta, gamma,
-										max_iters, handles_deadend)
+srwr.read_graph(input_path) # read graph from input_path
+srwr.normalize() # do semi row-normalization
+rd, rp, rn, residuals = srwr.query(seed, c, epsilon, beta, gamma, max_iters, handles_deadend) # compute an SRWR query w.r.t. seed
 ```
 
 Note that `rp` is a positive SRWR score vector, `rn` is a negative SRWR score
