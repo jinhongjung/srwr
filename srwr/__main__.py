@@ -18,6 +18,10 @@ def process_query(input_path, output_path, output_type, seed=[], c=0.15,
 			path for storing an RWR score vector
 		output_type : str
 			type of output {'rp', 'rn', 'rd', 'both'}
+            * rp: a positive SRWR score vector
+            * rn: a negative SRWR score vector
+            * rd: a trusthworthiness vector, i.e., rd = rp - rn
+            * both: both of rp and rn (1st column: rp, 2nd column: rn)
 		seed : int
 			seed for query
 		c : float
