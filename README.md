@@ -81,7 +81,7 @@ We summarize the input arguments of `srwr` in the following table:
 | `gamma` | Balance attenuation factor | `1e-9`|
 | `epsilon` | Error tolerance for power iteration | `1e-9`|
 | `max-iters` |  Maximum number of iterations for power iteration | `100`|
-| `handles_deadend` |  If true, handles the deadend issue | `True`|
+| `handles-deadend` |  If true, handles the deadend issue | `True`|
 
 Note the followings:
 * For directed graphs, there might be deadend nodes whose outdegree is zero. In this case, a naive power iteration would incur leaking out scores. 
