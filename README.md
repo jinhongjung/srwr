@@ -88,3 +88,19 @@ Note the followings:
 `handles_deadend` exists for such issue handling deadend nodes. With `handles_deadend`, you can guarantee that the sum of a score vector is 1.
 Otherwise, the sum would less than 1 in directed graphs. 
 The strategy `srwr` exploits is that whenever a random surfer visits a deadend node, go back to a seed node (or one of seed nodes), and restart.
+
+### Citation
+```
+@inproceedings{conf/icdm/JungJSK16,
+  author    = {Jinhong Jung and
+               Woojeong Jin and
+               Lee Sael and
+               U. Kang},
+  title     = {Personalized Ranking in Signed Networks Using Signed Random Walk with
+               Restart},
+  booktitle = {{IEEE} 16th International Conference on Data Mining, {ICDM} 2016,
+               December 12-15, 2016, Barcelona, Spain},
+  pages     = {973--978},
+  year      = {2016},
+}
+```
