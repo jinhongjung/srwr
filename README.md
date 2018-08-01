@@ -85,7 +85,7 @@ We summarize the input arguments of `srwr` in the following table:
 
 Note the followings:
 * For directed graphs, there might be deadend nodes whose outdegree is zero. In this case, a naive power iteration would incur leaking out scores. 
-`handles_deadend` exists for such issue handling deadend nodes. With `handles_deadend`, you can guarantee that the sum of a score vector is 1.
+`handles_deadend` exists for such issue handling deadend nodes. With `handles_deadend`, you can guarantee that the sum of `rp + rn` vector is 1.
 Otherwise, the sum would less than 1 in directed graphs. 
 The strategy `srwr` exploits is that whenever a random surfer visits a deadend node, go back to a seed node (or one of seed nodes), and restart.
 

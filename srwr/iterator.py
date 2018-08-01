@@ -2,8 +2,9 @@ import numpy as np
 from tqdm import tqdm
 from numpy.linalg import norm
 
+
 def iterate(nApT, nAnT, seed, c, epsilon, beta, gamma, max_iters,
-        handles_deadend):
+            handles_deadend):
 
     m, n = nApT.shape
     q = np.zeros((n, 1))
@@ -18,17 +19,17 @@ def iterate(nApT, nAnT, seed, c, epsilon, beta, gamma, max_iters,
     pbar = tqdm(total=max_iters, leave=True)
     for i in range(max_iters):
         if handles_deadend:
-            new_rp = (1-c)*( nApT.dot(rp + (1.0-gamma)*rn)
-                             + beta*(nAnT.dot(rn)) )
-            new_rn = (1-c)*( gamma*(nApT.dot(rn))
-                             + nAnT.dot(rp + (1.0-beta)*rn) )
+            new_rp = (1-c)*(nApT.dot(rp + (1.0-gamma)*rn)
+                            + beta*(nAnT.dot(rn)))
+            new_rn = (1 - c) * (gamma*(nApT.dot(rn))
+                            + nAnT.dot(rp + (1.0-beta)*rn))
             P = np.sum(new_rp) + np.sum(new_rn)
             new_rp = new_rp + (1.0 - P)*q
         else:
-            new_rp = (1-c)*( nApT.dot(rp + (1.0-gamma)*rn)
-                             + beta*(nAnT.dot(rn)) ) + c*q
-            new_rn = (1-c)*( gamma*(nApT.dot(rn))
-                             + nAnT.dot(rp + (1.0-beta)*rn) )
+            new_rp = (1-c)*(nApT.dot(rp + (1.0-gamma)*rn)
+                            + beta*(nAnT.dot(rn))) + c*q
+            new_rn = (1-c)*(gamma*(nApT.dot(rn))
+                            + nAnT.dot(rp + (1.0-beta)*rn))
 
         new_rt = np.row_stack((new_rp, new_rn))
 

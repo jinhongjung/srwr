@@ -1,6 +1,7 @@
 import numpy as np
 from scipy.sparse import csr_matrix, spdiags, find
 
+
 def semi_row_normalize(A):
     m, n = A.shape
 
@@ -15,8 +16,8 @@ def semi_row_normalize(A):
 
     I, J, K = find(snA)
 
-    pos = K > 0;
-    neg = K < 0;
+    pos = K > 0
+    neg = K < 0
 
     nAp = csr_matrix((abs(K[pos]), (I[pos], J[pos])), shape=(m, n))
     nAn = csr_matrix((abs(K[neg]), (I[neg], J[neg])), shape=(m, n))
