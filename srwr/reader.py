@@ -5,6 +5,16 @@ from scipy.sparse import csr_matrix
 def read_graph(path):
     '''
     Read the signed network from the path
+
+    inputs
+        path: string
+            path for input file
+
+    outputs
+        A: csr_matrix
+            signed adjacency matrix
+        base: int
+            base number of node id (start from base)
     '''
 
     X = np.loadtxt(path, dtype=float, comments='#')

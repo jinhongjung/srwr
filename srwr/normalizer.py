@@ -3,6 +3,20 @@ from scipy.sparse import csr_matrix, spdiags, find
 
 
 def semi_row_normalize(A):
+    '''
+    Perform the semi row-normalization for given adjacency matrix
+
+    inputs
+        A: csr_matrix
+            adjacency matrix of given graph
+
+    outputs
+        nAp: csr_matrix
+            positive semi row-normalized adjacency matrix
+        nAn: csr_matrix
+            negative semi row-normalized adjacency matrix
+    '''
+
     m, n = A.shape
 
     # row-wise sum, d is out-degree for each node
@@ -21,10 +35,5 @@ def semi_row_normalize(A):
 
     nAp = csr_matrix((abs(K[pos]), (I[pos], J[pos])), shape=(m, n))
     nAn = csr_matrix((abs(K[neg]), (I[neg], J[neg])), shape=(m, n))
-
-    print("nap")
-    print(nAp)
-    print("nan")
-    print(nAn)
 
     return nAp, nAn

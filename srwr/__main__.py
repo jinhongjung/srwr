@@ -1,10 +1,8 @@
 import sys
 import numpy as np
-# from time import process_time as tic, process_time as toc
 from srwr.srwr import SRWR
 import fire
 
-import tensorflow as tf
 
 def process_query(input_path, output_path, output_type, seed, c=0.15,
                   epsilon=1e-9, beta=0.5, gamma=0.5, max_iters=300,
@@ -51,6 +49,9 @@ def process_query(input_path, output_path, output_type, seed, c=0.15,
 
 
 def write_vectors(rd, rp, rn, output_path, output_type):
+    '''
+    Write vectors into a file
+    '''
     if output_type is 'rp':
         X = rp
     elif output_type is 'rn':
