@@ -33,7 +33,7 @@ class SRWR:
             self.normalized = True
 
     def query(self, seed, c=0.15, epsilon=1e-9, beta=0.5, gamma=0.5,
-              max_iters=300, handles_deadend=True):
+              max_iters=300, handles_deadend=True, verbose=True):
         '''
         Compute an SRWR query for given seed
 
@@ -54,6 +54,8 @@ class SRWR:
                 if true, it will handle the deadend issue in power iteration
                 otherwise, it won't, i.e., no guarantee for sum of SRWR scores
                 to be 1 in directed graphs
+            verbose: bool
+                if true, it will show a progress bar over iterations
 
         outputs:
             rd: ndarray
@@ -71,6 +73,7 @@ class SRWR:
 
         rd, rp, rn, residuals = iterator.iterate(self.nApT, self.nAnT, seed, c,
                                                  epsilon, beta, gamma,
-                                                 max_iters, handles_deadend)
+                                                 max_iters, handles_deadend,
+                                                 verbose)
 
         return rd, rp, rn, residuals

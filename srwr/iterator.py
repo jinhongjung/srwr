@@ -4,7 +4,7 @@ from numpy.linalg import norm
 
 
 def iterate(nApT, nAnT, seed, c, epsilon, beta, gamma, max_iters,
-            handles_deadend):
+            handles_deadend, verbose):
     '''
     Perform power iteration for SRWR query
 
@@ -29,6 +29,8 @@ def iterate(nApT, nAnT, seed, c, epsilon, beta, gamma, max_iters,
             if true, it will handle the deadend issue in power iteration
             otherwise, it won't, i.e., no guarantee for sum of SRWR scores
             to be 1 in directed graphs
+        verbose: bool
+            if true, it will show a progress bar over iterations
 
     outputs:
         rd: ndarray
@@ -52,13 +54,13 @@ def iterate(nApT, nAnT, seed, c, epsilon, beta, gamma, max_iters,
 
     residuals = np.zeros((max_iters, 1))
 
-    pbar = tqdm(total=max_iters, leave=True)
+    pbar = tqdm(total=max_iters, leave=True, disable=not verbose)
     for i in range(max_iters):
         if handles_deadend:
-            new_rp = (1 - c) * (nApT.dot(rp + (1 - gamma) * rn) +
+            new_rp = (1 - c) * (nApT.dot(rp + (1.0 - gamma) * rn) +
                                 beta * (nAnT.dot(rn)))
             new_rn = (1 - c) * (gamma * (nApT.dot(rn)) +
-                                nAnT.dot(rp + (1 - beta) * rn))
+                                nAnT.dot(rp + (1.0 - beta) * rn))
             P = np.sum(new_rp) + np.sum(new_rn)
             new_rp = new_rp + (1.0 - P) * q
         else:

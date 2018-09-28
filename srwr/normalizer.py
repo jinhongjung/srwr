@@ -21,10 +21,10 @@ def semi_row_normalize(A):
 
     # row-wise sum, d is out-degree for each node
     d = abs(A).sum(axis=1)
+    d = np.asarray(d).flatten()
 
-    d = np.maximum(d, np.ones((n, 1)))
+    d = np.maximum(d, np.ones(n))
     invd = 1.0 / d
-    invd = np.reshape(invd, (1, -1))
     invD = spdiags(invd, 0, m, n)
     snA = invD * A
 

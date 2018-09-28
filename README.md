@@ -89,7 +89,22 @@ Note the followings:
 Otherwise, the sum would less than 1 in directed graphs. 
 The strategy `srwr` exploits is that whenever a random surfer visits a deadend node, go back to a seed node (or one of seed nodes), and restart.
 
-### Citation
+## How to test this repository?
+We add a simple script to test codes in this repository. 
+```bash
+python3 -m unittest test.srwr_test
+```
+
+This command will test the codes on two testcases located in
+`data/testcases-*`, and show the below messages if it passes the tests.
+```bash
+----------------------------------------------------------------------
+Ran 2 tests in 0.186s
+
+OK
+```
+
+# Citation
 ```
 @inproceedings{conf/icdm/JungJSK16,
   author    = {Jinhong Jung and
