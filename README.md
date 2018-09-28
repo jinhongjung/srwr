@@ -82,6 +82,7 @@ We summarize the input arguments of `srwr` in the following table:
 | `epsilon` | Error tolerance for power iteration | `1e-9`|
 | `max-iters` |  Maximum number of iterations for power iteration | `100`|
 | `handles-deadend` |  If true, handles the deadend issue | `True`|
+| `verbose` |  If true, it will show a progress base over iterations | `True`|
 
 Note the followings:
 * For directed graphs, there might be deadend nodes whose outdegree is zero. In this case, a naive power iteration would incur leaking out scores. 
