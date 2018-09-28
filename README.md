@@ -105,7 +105,7 @@ Ran 2 tests in 0.186s
 OK
 ```
 
-# Citation
+## Citation
 ```
 @inproceedings{conf/icdm/JungJSK16,
   author    = {Jinhong Jung and
