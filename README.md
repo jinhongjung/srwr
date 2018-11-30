@@ -7,6 +7,7 @@ which was proposed by the following paper:
 * [Personalized Ranking in Signed Networks using Signed Random Walk with
   Restart](https://datalab.snu.ac.kr/~jinhong/papers/srwrICDM2016.pdf), Jinhong Jung, Woojung Jin, Lee Sael, and U Kang, 
   IEEE International Conference on Data Mining (ICDM) 2016, Barcelona, Spain. 
+* You can download the slides for the paper [here](http://datalab.snu.ac.kr/~jinhong/slides/srwrICDM2016.pptx).
 
 ## Installation
 To install python packages used in this repository, type the followings:
