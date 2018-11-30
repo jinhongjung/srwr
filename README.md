@@ -7,6 +7,8 @@ which was proposed by the following paper:
 * [Personalized Ranking in Signed Networks using Signed Random Walk with
   Restart](https://datalab.snu.ac.kr/~jinhong/papers/srwrICDM2016.pdf), Jinhong Jung, Woojung Jin, Lee Sael, and U Kang, 
   IEEE International Conference on Data Mining (ICDM) 2016, Barcelona, Spain. 
+  
+The following materials (slides, matlab codes, and datasets) can be useful.
 * You can download the slides for the paper [here](http://datalab.snu.ac.kr/~jinhong/slides/srwrICDM2016.pptx).
 * The MATLAB version used in the paper can be downloaded [here](https://datalab.snu.ac.kr/srwr/resources/SRWR-v1.2.zip).
 * The datasets used in the paper are available at [here](https://datalab.snu.ac.kr/srwr/).
