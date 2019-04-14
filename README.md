@@ -38,6 +38,7 @@ The default input of `srwr` represents the edge list of a graph with the followi
 2	3   +1
 ...
 ```
+> Although we assume the sign is +1 or -1, any real number can be used as a signed weight of an edge in the input. 
 
 ### Output Format
 The default output of `srwr` contains an SRWR score vector (`--output-type` is among `rp`, `rn`, and `rd`) w.r.t. the given seed node as follows:
@@ -69,7 +70,7 @@ rd, rp, rn, residuals = srwr.query(seed, c, epsilon, beta, gamma, max_iters, han
 
 Note that `rp` is a positive SRWR score vector, `rn` is a negative SRWR score
 vector, and `rd` is called a relative trusthworthiness score vector (i.e., rd =
-rp - rn)
+rp - rn) indicating that the negative `rd` score of node `u` means `seed` considers node `u` as enemy while the positive one means `seed` considers node `u` as friend.
 
 
 ## Arguments of `srwr`
