@@ -128,7 +128,7 @@ OK
 ```
 
 ## Todo
-* [] Add a notebook for SRWR tutorial
-* [] Add an option for global ranking of SRWR
-* [] Add a link for describing the SRWR's global ranking
-* [] Add a link for describing the deadend issue
+* [ ] Add a notebook for SRWR tutorial
+* [ ] Add an option for global ranking of SRWR
+* [ ] Add a link for describing the SRWR's global ranking
+* [ ] Add a link for describing the deadend issue
