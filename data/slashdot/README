@@ -1,0 +1,24 @@
+The Slashdot Zoo corpus
+=======================
+
+This is the Slashdot Zoo corpus, extracted by Jérôme.
+
+zoodir.tar.bz2 contains the original corpus.
+
+The out.* files are generated from that by the code in SVN:
+
+http://cvs/svn/IRML/trunk/zoo/
+
+out.corpus -- The whole corpus with usernames
+out.userids -- mapping from usernames to user IDs.  User IDs are continuous and start at one.  User IDs are not those used by Slashdot.
+out.matrix -- The corpus in Matlab-readable form, using user IDs.
+out.test/training -- subsets of out.matrix for evaluating link sign prediction
+out.trolls -- list of known trolls as used in trolls prediction
+out.matrix.clean -- subset of out.matrix used for troll prediction evaluation
+
+zoodir.tar.bz2 unpacks to zoodir/, which is the originally extracted data.
+
+Warning:  zoodir/ contains one subdirectory for each user (about 70,000), so be sure not to use any GUI file explorer or ls.  Tab completion for usernames is fast though.
+Also, usernames may not be suitable for some filesystems, e.g. those that identify lowercase and uppercase.
+Some usernames contain characters that may pose problems for some filesystems or that may need quoting (but no space):  ~ * ! ' ( ) % 
+.
